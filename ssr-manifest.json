@@ -76,20 +76,6 @@
     "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
     "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
   ],
-  "src/utils/index.ts": [
-    "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
-    "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
-    "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
-    "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
-    "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
-  ],
-  "src/logic/Live2d.ts": [
-    "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
-    "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
-    "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
-    "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
-    "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
-  ],
   "src/layouts/components/ToggleButton.vue?vue&type=script&lang.ts": [
     "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
     "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
@@ -160,35 +146,42 @@
     "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
     "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
   ],
-  "src/components/Aplayer/index.vue?vue&type=script&lang.ts": [
+  "src/plugins/Aplayer/index.vue?vue&type=script&lang.ts": [
     "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
     "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
     "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
     "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
     "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
   ],
-  "src/components/Aplayer/index.vue": [
+  "src/plugins/Aplayer/index.vue": [
     "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
     "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
     "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
     "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
     "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
   ],
-  "src/components/Github.vue?vue&type=script&lang.ts": [
+  "src/plugins/Github.vue?vue&type=script&lang.ts": [
     "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
     "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
     "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
     "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
     "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
   ],
-  "src/components/Github.vue?vue&type=style&index=0&scoped=true&lang.css": [
+  "src/plugins/Github.vue": [
     "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
     "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
     "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
     "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
     "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
   ],
-  "src/components/Github.vue": [
+  "src/plugins/Live2dWidget.vue?vue&type=script&lang.ts": [
+    "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
+    "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
+    "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
+    "/assets/iJWKBXyIfDnIV7nPrXyw023e1Ik.566ad8fd.woff2",
+    "/assets/iJWKBXyIfDnIV7nBrXyw023e.dc15c6ee.woff2"
+  ],
+  "src/plugins/Live2dWidget.vue": [
     "/assets/iJWKBXyIfDnIV7nMrXyw023e1Ik.69e608bb.woff2",
     "/assets/iJWKBXyIfDnIV7nFrXyw023e1Ik.85aa3ddb.woff2",
     "/assets/iJWKBXyIfDnIV7nDrXyw023e1Ik.2f495f8d.woff2",
