@@ -14,17 +14,20 @@
       :root {
         --popup-nav-height: 70px;
       }
+
       html,
       body {
         margin: 0;
         padding: 0;
       }
+
       #root {
         display: flex;
         justify-content: center;
         width: 100%;
         background-color: #f9f9f9;
       }
+
       #root * {
         box-sizing: border-box;
       }
@@ -32,29 +35,33 @@
       .yummy-popup.yummy-show {
         display: initial;
       }
+
       .yummy-popup {
-        display: none;
         position: fixed;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
+        display: none;
         overflow: hidden;
         background-color: #f9f9f9;
       }
+
       .yummy-popup-nav {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        height: var(--popup-nav-height);
+        justify-content: space-between;
         width: 100%;
+        height: var(--popup-nav-height);
+        padding: 0 20px;
         background-color: #363430;
         color: #fff;
-        padding: 0 20px;
       }
+
       .yummy-popup-nav-hide {
         cursor: pointer;
       }
+
       .yummy-popup-main {
         display: flex;
         flex-direction: column;
@@ -64,6 +71,7 @@
         overflow-x: hidden;
         overflow-y: auto;
       }
+
       .yummy-select {
         position: relative;
         display: flex;
@@ -74,73 +82,81 @@
         border-radius: 2px;
         padding-right: 35px;
       }
+
       .yummy-select > svg {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         right: 12px;
         z-index: 1;
+        transform: translateY(-50%);
       }
+
       .yummy-select > select {
-        border: none;
-        outline: none;
         width: 100%;
         height: 100%;
+        border: none;
+        outline: none;
         appearance: none;
         text-align-last: center;
       }
+
       .yummy-select::after {
         content: '';
-        background-color: #89a74d;
         position: absolute;
-        right: 0;
         top: -1px;
+        right: 0;
         width: 35px;
         height: 31px;
         border-radius: 0 2px 2px 0;
+        background-color: #89a74d;
         pointer-events: none;
       }
+
       .yummy-upload {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: flex-start;
+        justify-content: space-between;
       }
+
       .yummy-upload > label {
         display: flex;
         flex-direction: column;
-        padding: 4px 16px;
         border-radius: 2px;
+        padding: 4px 16px;
         background-color: #89a74d;
         font-size: 16px;
         font-weight: bold;
-        text-align: center;
         color: white;
+        text-align: center;
         cursor: pointer;
       }
+
       .yummy-upload-img-list {
+        display: flex;
         margin: 0;
         padding: 0;
-        display: flex;
       }
+
       .yummy-upload-img-list > li {
         position: relative;
         margin: 0;
         padding: 0 15px 0 0;
         list-style-type: none;
       }
+
       .yummy-upload-img-list-close {
         position: absolute;
         top: -6px;
         right: 5px;
-        width: 21px;
-        height: 21px;
         display: flex;
         justify-content: center;
+        width: 21px;
+        height: 21px;
         border: 1px solid gray;
         border-radius: 50%;
-        line-height: 16px;
         background-color: #fff;
+        line-height: 16px;
         color: black;
         cursor: pointer;
       }
@@ -152,41 +168,50 @@
       .popup-store-credit {
         width: 900px;
       }
+
       .popup-store-credit-title {
         margin: 50px 0 16px 0;
         font-size: 30px;
         font-weight: bold;
       }
+
       .popup-store-credit-info {
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
       }
+
       .popup-store-credit-info-item {
         display: flex;
         height: 22px;
         line-height: 22px;
       }
+
       .popup-store-credit-info-item > label {
         margin-right: 5px;
         font-weight: 300;
       }
+
       .popup-store-credit-info-item > div {
         font-weight: bold;
       }
+
       .popup-store-credit-info-item:not(.popup-store-credit-info-item:nth-last-of-type(1)) {
         margin-bottom: 7px;
       }
+
       .popup-store-credit-package {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
       }
+
       .popup-store-credit-package-title {
         position: relative;
         font-size: 30px;
         font-weight: bold;
       }
+
       .popup-store-credit-package-title::after {
         content: '';
         position: absolute;
@@ -196,102 +221,121 @@
         height: 1px;
         background-color: #000;
       }
+
       .popup-store-credit-package-info {
         margin: 7px 0 15px 0;
       }
+
       .popup-store-credit-package-info-item {
         display: flex;
-        height: 31px;
         width: 365px;
+        height: 31px;
         line-height: 31px;
       }
+
       .popup-store-credit-package-info-item > label {
+        flex-shrink: 0;
         margin-right: 10px;
         font-weight: 300;
-        flex-shrink: 0;
       }
+
       .popup-store-credit-package-info-item > div {
         font-weight: bold;
       }
+
       .popup-store-credit-package-info-item:not(.popup-store-credit-package-info-item:nth-last-of-type(1)) {
         margin-bottom: 10px;
       }
+
       .popup-store-credit-package-conditions {
+        margin-bottom: 16px;
         width: 100%;
         height: 170px;
-        margin-bottom: 16px;
+        box-shadow: 0 0 3px 1px #e4e0e0;
         background-color: #fff;
-        box-shadow: 0 0px 3px 1px #e4e0e0;
       }
+
       .popup-store-credit-package-conditions-title {
         display: flex;
         align-items: center;
         height: 35px;
-        padding: 0 16px;
         border-bottom: 1px solid #efefef;
+        padding: 0 16px;
         font-weight: bold;
       }
+
       .popup-store-credit-package-conditions-content {
-        height: calc(100% - 35px);
         display: flex;
         justify-content: space-between;
+        height: calc(100% - 35px);
         padding: 12px 8px;
       }
+
       .popup-store-credit-package-conditions-content-tips {
         display: flex;
       }
+
       .popup-store-credit-package-conditions-content-tips > div {
         display: flex;
         flex-direction: column;
         font-size: 14px;
       }
+
       .popup-store-credit-package-conditions-content-tips > div:nth-of-type(1) {
+        margin-right: 40px;
         width: 114px;
-        margin-right: 40px;
       }
+
       .popup-store-credit-package-conditions-content-tips > div:nth-of-type(2) {
-        width: 90px;
         margin-right: 40px;
+        width: 90px;
       }
+
       .popup-store-credit-package-conditions-content-tips > div:nth-of-type(3) {
-        width: 120px;
         margin-right: 5px;
+        width: 120px;
       }
+
       .popup-store-credit-package-conditions-content-tips > div > img {
         margin-top: 7px;
       }
+
       .popup-store-credit-package-affected-item {
+        margin-bottom: 100px;
         width: 100%;
         height: 170px;
-        margin-bottom: 100px;
+        box-shadow: 0 0 3px 1px #e4e0e0;
         background-color: #fff;
-        box-shadow: 0 0px 3px 1px #e4e0e0;
       }
+
       .popup-store-credit-package-affected-item-title {
         display: flex;
         align-items: center;
         height: 35px;
-        padding: 0 16px;
         border-bottom: 1px solid #efefef;
+        padding: 0 16px;
         font-weight: bold;
       }
+
       .popup-store-credit-submit-bar {
         position: fixed;
+        right: 0;
         bottom: 0;
         left: 0;
-        right: 0;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
+        justify-content: flex-end;
         width: 100%;
         height: 59px;
         padding: 0 35px;
+        box-shadow: 0 -3px 2px 0 #e4e0e0;
         background-color: #fff;
-        box-shadow: 0 -3px 2px 0px #e4e0e0;
       }
+
       .popup-store-credit-submit-bar > div {
         margin-right: 35px;
       }
+
       .popup-store-credit-submit-bar > button {
         width: 190px;
         height: 37px;
@@ -300,11 +344,13 @@
         background-color: #89a74d;
         font-size: 18px;
         font-weight: bold;
+        color: white;
         text-align: center;
         text-decoration: none;
-        color: white;
         cursor: pointer;
+        -webkit-appearance: none;
       }
+
       .popup-store-credit-submit-bar > button.disabled {
         background-color: #bcbcbc;
         cursor: not-allowed;
@@ -315,8 +361,8 @@
     <!-- ? PopupSubmitted Component -->
     <style>
       .popup-submitted {
-        width: 900px;
         margin-top: 50px;
+        width: 900px;
       }
     </style>
     <script type="text/babel" src="./src/PopupSubmitted.js"></script>
@@ -324,8 +370,8 @@
     <!-- ? PopupCheckStates Component -->
     <style>
       .popup-check-states {
-        width: 900px;
         margin-top: 50px;
+        width: 900px;
       }
     </style>
     <script type="text/babel" src="./src/PopupCheckStates.js"></script>
@@ -338,46 +384,55 @@
         width: 900px;
         padding: 45px 0 22px 0;
       }
+
       .claim-search-left,
       .claim-search-right {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
       }
+
       .claim-search-left {
         margin: 0 16px 10px 0;
       }
+
       .claim-search-right {
         margin: 0 0 10px 16px;
       }
+
       .claim-search-left-title,
       .claim-search-right-title {
         font-size: 24px;
         font-weight: bold;
       }
+
       .claim-search-left > form,
       .claim-search-right > form {
-        align-self: stretch;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: space-between;
-        padding: 18px 42px;
         height: 170px;
+        padding: 18px 42px;
         box-shadow: 0 0 3px 1px #e4e0e0;
         background-color: #fff;
+        align-self: stretch;
       }
+
       .claim-search-form-item > label {
         padding-right: 10px;
         font-size: 16px;
       }
+
       .claim-search-form-item > input {
         height: 37px;
       }
+
       .claim-search-form-item > input:not([type='submit']) {
         width: 242px;
       }
+
       .claim-search-form-item > input[type='submit'] {
         width: 110px;
         border: none;
@@ -385,10 +440,11 @@
         background-color: #89a74d;
         font-size: 18px;
         font-weight: bold;
+        color: white;
         text-align: center;
         text-decoration: none;
-        color: white;
       }
+
       .claim-search-bottom {
         display: grid;
         grid-area: 2 / 1 / span 1 / span 2;
@@ -399,25 +455,31 @@
         background-color: #fff;
         font-size: 18px;
       }
+
       .claim-search-bottom > div {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
       }
+
       .claim-search-bottom > div:nth-of-type(1) {
         grid-area: 1 / 1 / span 3 / span 1;
         font-weight: bold;
       }
+
       .claim-search-bottom > div:nth-of-type(2) {
         grid-area: 1 / 2 / span 1 / span 1;
       }
+
       .claim-search-bottom > div:nth-of-type(3) {
         grid-area: 1 / 3 / span 1 / span 1;
       }
+
       .claim-search-bottom > div:nth-of-type(4) {
         grid-area: 3 / 2 / span 1 / span 1;
         font-weight: bold;
       }
+
       .claim-search-bottom > div:nth-of-type(5) {
         grid-area: 3 / 3 / span 1 / span 1;
         font-weight: bold;
