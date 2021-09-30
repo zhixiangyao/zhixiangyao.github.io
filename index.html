@@ -1,27 +1,431 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <script defer="" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
-    <title>Index</title>
-    <script type="module" crossorigin="" src="/assets/app.96769c22.js"></script>
-    <link rel="modulepreload" href="/assets/vendor.81d0cef6.js">
-    <link rel="stylesheet" href="/assets/app.03f283e5.css">
-  <meta name="head:count" content="0"></head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
   <body>
-    <div id="app" data-server-rendered="true"><!--[--><!--[--><nav class="bg-gray-800 fixed top-0 left-0 w-screen z-10"><div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"><div class="relative flex items-center justify-between h-16 overflow-x-auto overflow-y-hidden"><div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"><div class="sm:block sm:ml-6"><div class="flex space-x-4"><!--[--><!--[--><button class="bg-gray-900 text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">index</button><button class="text-gray-300 text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">foo</button><button class="text-gray-300 text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">about</button><!--]--><!--]--></div></div></div><!--[--><div class="flex items-center justify-center" data-v-0cc655be=""><label for="toggle" class="flex items-center cursor-pointer" data-v-0cc655be=""><div class="relative" data-v-0cc655be=""><input type="checkbox" id="toggle" class="sr-only" data-v-0cc655be=""><div class="block bg-gray-600 w-14 h-8 rounded-full" data-v-0cc655be=""></div><div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition" data-v-0cc655be=""></div></div></label></div><!--]--></div></div></nav><main class="px-4 pt-26 pb-10 min-h-full text-center text-gray-700 dark:text-gray-200"><!--[--><div>Hello, Vite!</div><!--[--><h1 data-v-fc63dbee="">haha~</h1><p data-v-fc63dbee=""> Recommended IDE setup: <a class="a" href="https://code.visualstudio.com/" target="_blank" data-v-fc63dbee=""> VSCode </a> + <a class="a" href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank" data-v-fc63dbee=""> Vetur </a> or <a class="a" href="https://github.com/johnsoncodehk/volar" target="_blank" data-v-fc63dbee=""> Volar </a> if using <code class="code" data-v-fc63dbee="">&lt;script setup&gt;</code></p><p data-v-fc63dbee=""> See <code class="code" data-v-fc63dbee="">README.md</code> for more information. </p><p data-v-fc63dbee=""><a class="a" href="https://vitejs.dev/guide/features.html" target="_blank" data-v-fc63dbee=""> Vite Docs </a> | <a class="a" href="https://v3.vuejs.org/" target="_blank" data-v-fc63dbee=""> Vue 3 Docs </a></p><button data-v-fc63dbee="">count is: 0</button><p data-v-fc63dbee=""> Edit <code class="code" data-v-fc63dbee="">components/HelloWorld.vue</code> to test hot module replacement. </p><!--]--><!--]--></main><!--]--><!--teleport start--><!--teleport end--><!--]--></div>
-    <div id="global-components"></div>
-    <script defer="">
-      ;(() => {
-        const prefersDark =
-          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        const setting = localStorage.getItem('color-schema') || 'auto'
-        if (setting === 'dark' || (prefersDark && setting !== 'light'))
-          document.documentElement.classList.toggle('dark', true)
-      })()
-    </script>
-    
-  
+    <!-- * JSX bebel -->
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- * react and react-dom -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-</body></html>
+    <style>
+      :root {
+        --popup-nav-height: 70px;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #root {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #f9f9f9;
+      }
+      #root * {
+        box-sizing: border-box;
+      }
+
+      .yummy-popup.yummy-show {
+        display: initial;
+      }
+      .yummy-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        background-color: #f9f9f9;
+      }
+      .yummy-popup-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: var(--popup-nav-height);
+        width: 100%;
+        background-color: #363430;
+        color: #fff;
+        padding: 0 20px;
+      }
+      .yummy-popup-nav-hide {
+        cursor: pointer;
+      }
+      .yummy-popup-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: calc(100% - var(--popup-nav-height) - 53px);
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      .yummy-select {
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        height: 31px;
+        min-width: 80px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        padding-right: 35px;
+      }
+      .yummy-select > svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+        z-index: 1;
+      }
+      .yummy-select > select {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        appearance: none;
+        text-align-last: center;
+      }
+      .yummy-select::after {
+        content: '';
+        background-color: #89a74d;
+        position: absolute;
+        right: 0;
+        top: -1px;
+        width: 35px;
+        height: 31px;
+        border-radius: 0 2px 2px 0;
+        pointer-events: none;
+      }
+      .yummy-upload {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .yummy-upload > label {
+        display: flex;
+        flex-direction: column;
+        padding: 4px 16px;
+        border-radius: 2px;
+        background-color: #89a74d;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+      }
+      .yummy-upload-img-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      .yummy-upload-img-list > li {
+        position: relative;
+        margin: 0;
+        padding: 0 15px 0 0;
+        list-style-type: none;
+      }
+      .yummy-upload-img-list-close {
+        position: absolute;
+        top: -6px;
+        right: 5px;
+        width: 21px;
+        height: 21px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid gray;
+        border-radius: 50%;
+        line-height: 16px;
+        background-color: #fff;
+        color: black;
+        cursor: pointer;
+      }
+    </style>
+    <div id="root"></div>
+
+    <!-- ? PopupStoreCredit Component -->
+    <style>
+      .popup-store-credit {
+        width: 900px;
+      }
+      .popup-store-credit-title {
+        margin: 50px 0 16px 0;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .popup-store-credit-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+      }
+      .popup-store-credit-info-item {
+        display: flex;
+        height: 22px;
+        line-height: 22px;
+      }
+      .popup-store-credit-info-item > label {
+        margin-right: 5px;
+        font-weight: 300;
+      }
+      .popup-store-credit-info-item > div {
+        font-weight: bold;
+      }
+      .popup-store-credit-info-item:not(.popup-store-credit-info-item:nth-last-of-type(1)) {
+        margin-bottom: 7px;
+      }
+      .popup-store-credit-package {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .popup-store-credit-package-title {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .popup-store-credit-package-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+      }
+      .popup-store-credit-package-info {
+        margin: 7px 0 15px 0;
+      }
+      .popup-store-credit-package-info-item {
+        display: flex;
+        height: 31px;
+        width: 365px;
+        line-height: 31px;
+      }
+      .popup-store-credit-package-info-item > label {
+        margin-right: 10px;
+        font-weight: 300;
+        flex-shrink: 0;
+      }
+      .popup-store-credit-package-info-item > div {
+        font-weight: bold;
+      }
+      .popup-store-credit-package-info-item:not(.popup-store-credit-package-info-item:nth-last-of-type(1)) {
+        margin-bottom: 10px;
+      }
+      .popup-store-credit-package-conditions {
+        width: 100%;
+        height: 170px;
+        margin-bottom: 16px;
+        background-color: #fff;
+        box-shadow: 0 0px 3px 1px #e4e0e0;
+      }
+      .popup-store-credit-package-conditions-title {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        padding: 0 16px;
+        border-bottom: 1px solid #efefef;
+        font-weight: bold;
+      }
+      .popup-store-credit-package-conditions-content {
+        height: calc(100% - 35px);
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 8px;
+      }
+      .popup-store-credit-package-conditions-content-tips {
+        display: flex;
+      }
+      .popup-store-credit-package-conditions-content-tips > div {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+      }
+      .popup-store-credit-package-conditions-content-tips > div:nth-of-type(1) {
+        width: 114px;
+        margin-right: 40px;
+      }
+      .popup-store-credit-package-conditions-content-tips > div:nth-of-type(2) {
+        width: 90px;
+        margin-right: 40px;
+      }
+      .popup-store-credit-package-conditions-content-tips > div:nth-of-type(3) {
+        width: 120px;
+        margin-right: 5px;
+      }
+      .popup-store-credit-package-conditions-content-tips > div > img {
+        margin-top: 7px;
+      }
+      .popup-store-credit-package-affected-item {
+        width: 100%;
+        height: 170px;
+        margin-bottom: 100px;
+        background-color: #fff;
+        box-shadow: 0 0px 3px 1px #e4e0e0;
+      }
+      .popup-store-credit-package-affected-item-title {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        padding: 0 16px;
+        border-bottom: 1px solid #efefef;
+        font-weight: bold;
+      }
+      .popup-store-credit-submit-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 59px;
+        padding: 0 35px;
+        background-color: #fff;
+        box-shadow: 0 -3px 2px 0px #e4e0e0;
+      }
+      .popup-store-credit-submit-bar > div {
+        margin-right: 35px;
+      }
+      .popup-store-credit-submit-bar > button {
+        width: 190px;
+        height: 37px;
+        border: none;
+        border-radius: 2px;
+        background-color: #89a74d;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+      .popup-store-credit-submit-bar > button.disabled {
+        background-color: #bcbcbc;
+        cursor: not-allowed;
+      }
+    </style>
+    <script type="text/babel" src="./src/PopupStoreCredit.js"></script>
+
+    <!-- ? PopupSubmitted Component -->
+    <style>
+      .popup-submitted {
+        width: 900px;
+        margin-top: 50px;
+      }
+    </style>
+    <script type="text/babel" src="./src/PopupSubmitted.js"></script>
+
+    <!-- ? PopupCheckStates Component -->
+    <style>
+      .popup-check-states {
+        width: 900px;
+        margin-top: 50px;
+      }
+    </style>
+    <script type="text/babel" src="./src/PopupCheckStates.js"></script>
+
+    <!-- ! ClaimSearch Component -->
+    <style>
+      .claim-search {
+        display: grid;
+        grid-template: 220px 122px / 1fr 1fr;
+        width: 900px;
+        padding: 45px 0 22px 0;
+      }
+      .claim-search-left,
+      .claim-search-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .claim-search-left {
+        margin: 0 16px 10px 0;
+      }
+      .claim-search-right {
+        margin: 0 0 10px 16px;
+      }
+      .claim-search-left-title,
+      .claim-search-right-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .claim-search-left > form,
+      .claim-search-right > form {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 18px 42px;
+        height: 170px;
+        box-shadow: 0 0 3px 1px #e4e0e0;
+        background-color: #fff;
+      }
+      .claim-search-form-item > label {
+        padding-right: 10px;
+        font-size: 16px;
+      }
+      .claim-search-form-item > input {
+        height: 37px;
+      }
+      .claim-search-form-item > input:not([type='submit']) {
+        width: 242px;
+      }
+      .claim-search-form-item > input[type='submit'] {
+        width: 110px;
+        border: none;
+        border-radius: 2px;
+        background-color: #89a74d;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+      }
+      .claim-search-bottom {
+        display: grid;
+        grid-area: 2 / 1 / span 1 / span 2;
+        grid-template: 1fr 10px 1fr / 1fr 1fr 1fr;
+        margin-top: 10px;
+        padding: 24px 70px;
+        box-shadow: 0 0 3px 1px #e4e0e0;
+        background-color: #fff;
+        font-size: 18px;
+      }
+      .claim-search-bottom > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .claim-search-bottom > div:nth-of-type(1) {
+        grid-area: 1 / 1 / span 3 / span 1;
+        font-weight: bold;
+      }
+      .claim-search-bottom > div:nth-of-type(2) {
+        grid-area: 1 / 2 / span 1 / span 1;
+      }
+      .claim-search-bottom > div:nth-of-type(3) {
+        grid-area: 1 / 3 / span 1 / span 1;
+      }
+      .claim-search-bottom > div:nth-of-type(4) {
+        grid-area: 3 / 2 / span 1 / span 1;
+        font-weight: bold;
+      }
+      .claim-search-bottom > div:nth-of-type(5) {
+        grid-area: 3 / 3 / span 1 / span 1;
+        font-weight: bold;
+      }
+    </style>
+    <script type="text/babel" src="./src/ClaimSearch.js"></script>
+
+    <!-- ! App Component -->
+    <script type="text/babel" src="./src/App.js"></script>
+  </body>
+</html>
